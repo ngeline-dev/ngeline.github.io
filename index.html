@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="assets/css/animated.css">
   <link rel="stylesheet" href="assets/css/owl.css">
   <link rel="stylesheet" href="assets/css/masonry.css">
+  <link rel="stylesheet" href="assets/css/custom.css">
 
 </head>
 
@@ -154,31 +155,31 @@
               <div class="row">
                 <div class="col-lg-12">
                   <div class="menu">
-                    <div class="first-thumb active">
+                    <div class="first-thumb active service">
                       <div class="thumb">
                         <span id="landing-page" class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
                         Landing Page
                       </div>
                     </div>
-                    <div>
+                    <div class="service">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/service-icon-02.png" alt=""></span>
                         Profil Perusahaan
                       </div>
                     </div>
-                    <div>
+                    <div class="service">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/service-icon-03.png" alt=""></span>
                         Sekolah
                       </div>
                     </div>
-                    <div>
+                    <div class="service">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/service-icon-04.png" alt=""></span>
                         App Web/Mobile
                       </div>
                     </div>
-                    <div class="last-thumb">
+                    <div class="last-thumb service">
                       <div class="thumb">
                         <span class="icon"><img src="assets/images/service-icon-01.png" alt=""></span>
                         Dan lain-lain
@@ -442,7 +443,7 @@
       </div>
     </div>
     <div class="container-fluid wow fadeIn ps-4">
-      <div class="grid align-items-center">
+    <!--   <div class="grid align-items-center">
         <div class="grid-item grid-item--width2 shadow fadeIn rounded" data-wow-duration="0.4s" data-wow-delay="0.7s">
           <img src="assets/images/portfolio/deltanet.png" alt="Delta Net">
         </div>
@@ -458,19 +459,19 @@
         <div class="grid-item grid-item--width6 shadow fadeIn rounded" data-wow-duration="1.2s" data-wow-delay="1.6s">
           <img src="assets/images/portfolio/panjalu.png" alt="Panjalu">
         </div>
-      </div>
-      <!-- <div class="row">
+      </div> -->
+      <div class="row">
         <div class="col-lg-12">
           <div class="loop owl-carousel">
-            <div class="item" style="height: 24.5rem;">
+            <div class="item">
               <a href="#">
                 <div class="portfolio-item">
                   <div class="thumb">
-                    <img src="assets/images/portfolio/bengkel-delta.png" alt="" style="height: 24.5rem;">
+                    <img src="assets/images/portfolio/bengkel-delta.png" alt="Bengkel Delta">
                   </div>
                   <div class="down-content">
                     <h4>Website Builder</h4>
-                    <span>Marketing</span>
+                    <span>Bengkel Delta</span>
                   </div>
                 </div>
               </a>
@@ -479,57 +480,57 @@
               <a href="#">
                 <div class="portfolio-item">
                   <div class="thumb">
-                    <img src="assets/images/portfolio/gendis.png" alt="">
+                    <img src="assets/images/portfolio/gendis.png" alt="Gendhis">
                   </div>
                   <div class="down-content">
                     <h4>Website Builder</h4>
-                    <span>Marketing</span>
+                    <span>Gendhis</span>
                   </div>
                 </div>
               </a>
             </div>
-            <div class="item" style="height: 24.5rem;">
+            <div class="item">
               <a href="#">
                 <div class="portfolio-item">
                   <div class="thumb">
-                    <img src="assets/images/portfolio/aezabelle.png" alt="" style="height: 24.5rem;">
+                    <img src="assets/images/portfolio/aezabelle.png" alt="Aezabelle">
                   </div>
                   <div class="down-content">
                     <h4>Website Builder</h4>
-                    <span>Marketing</span>
+                    <span>Aezabelle</span>
                   </div>
                 </div>
               </a>
             </div>
-            <div class="item" style="height: 24.5rem;">
+            <div class="item">
               <a href="#">
                 <div class="portfolio-item">
                   <div class="thumb">
-                    <img src="assets/images/portfolio/panjalu.png" alt="" style="height: 24.5rem;">
+                    <img src="assets/images/portfolio/panjalu.png" alt="Panjalu">
                   </div>
                   <div class="down-content">
                     <h4>Website Builder</h4>
-                    <span>Marketing</span>
+                    <span>Panjalu</span>
                   </div>
                 </div>
               </a>
             </div>
-            <div class="item" style="height: 24.5rem;">
+            <div class="item">
               <a href="#">
                 <div class="portfolio-item">
                   <div class="thumb">
-                    <img src="assets/images/portfolio/deltanet.png" alt="" style="height: 24.5rem;">
+                    <img src="assets/images/portfolio/deltanet.png" alt="Delta Net">
                   </div>
                   <div class="down-content">
                     <h4>Website Builder</h4>
-                    <span>Marketing</span>
+                    <span>Delta Net</span>
                   </div>
                 </div>
               </a>
             </div>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
 
@@ -755,16 +756,21 @@
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/custom.js"></script>
-  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <script src="assets/js/masonry.pkgd.min.js"></script>
   <script>
     $(document).ready(function () {      
+      $("#portfolio .loop .item img").addClass('portofolio-custom');          
+
       $(window).resize(function () { 
+        let window_width = this.outerWidth;
         if (this.outerWidth <= 720) {
-          $("#bengkel_delta").removeClass("grid-item--width3");
-          $("#bengkel_delta").addClass("grid-item--width-0");
+          $(".service").addClass('me-2');
+          // $("#portfolio portofolio-custom").removeClass('portofolio-custom');          
+          $("#portfolio .loop .item img").removeClass('portofolio-custom');          
         } else {
-          $("#bengkel_delta").addClass("grid-item--width3");
-          $("#bengkel_delta").removeClass("grid-item--width-0");
+          $(".service").removeClass('me-2');
+          // $("#portfolio .loop .item").addClass('portofolio-custom');          
+          $("#portfolio .loop .item img").addClass('portofolio-custom');          
         }
       });
     });
